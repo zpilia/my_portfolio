@@ -26,7 +26,9 @@ const Home = () => {
                 <Header />
                 <main>
                     <section id="home" className="flex flex-col items-center justify-center h-screen px-4 md:px-8">
-                        <TextReveal />
+                        <div className="bg-opacity-15 px-6 py-4 rounded-lg w-fit mx-auto">
+                            <TextReveal />
+                        </div>
 
                         <a href="#aboutme" className="mt-8 animate-bounce">
                             <FaChevronDown className="text-white text-3xl" />
