@@ -4,44 +4,56 @@ import { FaInstagram, FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
 const Footer = () => {
     const currentYear = new Date().getFullYear();
 
+    const iconData = [
+        {
+            name: 'LinkedIn',
+            icon: <FaLinkedin className="w-6 h-6" />,
+            href: 'https://www.linkedin.com/in/zoé-pilia-1780161b0',
+            hoverColor: '#0077B5'
+        },
+        {
+            name: 'GitHub',
+            icon: <FaGithub className="w-6 h-6" />,
+            href: 'https://github.com/zpilia',
+            hoverColor: 'gray'
+        },
+        {
+            name: 'Instagram',
+            icon: <FaInstagram className="w-6 h-6" />,
+            href: 'https://www.instagram.com/kimlai.2001/',
+            hoverColor: '#E4405F'
+        },
+        {
+            name: 'X (Twitter)',
+            icon: <FaTwitter className="w-6 h-6" />,
+            href: 'https://x.com/zoe_pilia',
+            hoverColor: '#1DA1F2'
+        }
+    ];
+
     return (
         <footer className="border-t-2 border-gray-500">
             <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
                 <span className="text-sm text-white">© {currentYear} - All rights reserved</span>
 
                 <div className="flex space-x-6 mt-4 md:mt-0">
-                    <a
-                        href="https://www.linkedin.com/in/zoé-pilia-1780161b0"
-                        className="text-white hover:text-[#0077B5] sm:hover:text-[#0077B5] md:hover:text-[#0077B5]"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaLinkedin className="w-5 h-5" />
-                    </a>
-                    <a
-                        href="https://github.com/zpilia"
-                        className="text-white hover:text-gray-400 sm:hover:text-gray-400 md:hover:text-gray-400"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaGithub className="w-5 h-5" />
-                    </a>
-                    <a
-                        href="https://www.instagram.com/kimlai.2001/"
-                        className="text-white hover:text-[#E4405F] sm:hover:text-[#E4405F] md:hover:text-[#E4405F]"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaInstagram className="w-5 h-5" />
-                    </a>
-                    <a
-                        href="https://x.com/zoe_pilia"
-                        className="text-white hover:text-[#1DA1F2] sm:hover:text-[#1DA1F2] md:hover:text-[#1DA1F2]"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaTwitter className="w-5 h-5" />
-                    </a>
+                    {iconData.map(({ name, icon, href, hoverColor }) => (
+                        <div key={name} className="group relative inline-block">
+                            <a
+                                href={href}
+                                className={`text-white transform transition-transform duration-300 group-hover:scale-125 hover:text-[${hoverColor}]`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {icon}
+                            </a>
+                            <span
+                                className="absolute -top-10 left-1/2 transform -translate-x-1/2 z-20 px-2 py-1 text-sm font-bold text-white bg-gray-900 rounded-lg shadow-lg scale-0 group-hover:scale-100 transition-transform duration-300"
+                            >
+                                {name}
+                            </span>
+                        </div>
+                    ))}
                 </div>
             </div>
         </footer>
