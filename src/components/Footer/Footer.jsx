@@ -10,16 +10,36 @@ const Footer = () => {
                 <span className="text-sm text-white">© {currentYear} - All rights reserved</span>
 
                 <div className="flex space-x-6 mt-4 md:mt-0">
-                    <a href="https://www.linkedin.com/in/zoé-pilia-1780161b0" className="text-white hover:text-[#0077B5]" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://www.linkedin.com/in/zoé-pilia-1780161b0"
+                        className="text-white hover:text-[#0077B5] sm:hover:text-[#0077B5] md:hover:text-[#0077B5]"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <FaLinkedin className="w-5 h-5" />
                     </a>
-                    <a href="https://github.com/zpilia" className="text-white hover:text-gray-400" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://github.com/zpilia"
+                        className="text-white hover:text-gray-400 sm:hover:text-gray-400 md:hover:text-gray-400"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <FaGithub className="w-5 h-5" />
                     </a>
-                    <a href="https://www.instagram.com/kimlai.2001/" className="text-white hover:text-[#E4405F]" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://www.instagram.com/kimlai.2001/"
+                        className="text-white hover:text-[#E4405F] sm:hover:text-[#E4405F] md:hover:text-[#E4405F]"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <FaInstagram className="w-5 h-5" />
                     </a>
-                    <a href="https://x.com/zoe_pilia" className="text-white hover:text-[#1DA1F2]" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://x.com/zoe_pilia"
+                        className="text-white hover:text-[#1DA1F2] sm:hover:text-[#1DA1F2] md:hover:text-[#1DA1F2]"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <FaTwitter className="w-5 h-5" />
                     </a>
                 </div>
