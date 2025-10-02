@@ -13,14 +13,15 @@ const Bio = () => {
     );
 
     const parseText = (text) => {
-        return text.split(/(Zoé|23 ans|Développeuse Full‑Stack|janvier 2025|alternance en tant que développeuse front-end junior|Iceberg Data Lab|janvier 2026|Concepteur d'Application JavaScript|15 mois|activement à la recherche d'une nouvelle alternance|3 semaines en entreprise|1 semaine en formation)/g)
+        return text.split(/(Zoé|23 ans|Intégrateur‑Développeur Web|Développeuse Full‑Stack|janvier 2025|alternance en tant que Développeuse Front-end Junior|Iceberg Data Lab|janvier 2026|Concepteur d'Application JavaScript|15 mois|activement à la recherche d'une nouvelle alternance|3 semaines en entreprise|1 semaine en formation)/g)
             .map((part, index) =>
                 [
                     "Zoé",
                     "23 ans",
+                    "Intégrateur‑Développeur Web",
                     "Développeuse Full‑Stack",
                     "janvier 2025",
-                    "alternance en tant que développeuse front-end junior",
+                    "alternance en tant que Développeuse Front-end Junior",
                     "Iceberg Data Lab",
                     "janvier 2026",
                     "Concepteur d'Application JavaScript",
@@ -40,13 +41,13 @@ const Bio = () => {
                 À propos de <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">moi</span>
             </h1>
 
-            <p className="text-base md:text-lg leading-relaxed mb-6 text-center md:text-left">
+            <p className="text-base md:text-lg leading-relaxed mb-6 text-justify text-white">
                 {parseText(intro)}
             </p>
-            <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-300 text-center md:text-left">
+            <p className="text-base md:text-lg leading-relaxed mb-6 text-justify text-gray-300">
                 {parseText(alt)}
             </p>
-            <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-300 text-center md:text-left">
+            <p className="text-base md:text-lg leading-relaxed mb-6 text-justify text-gray-300">
                 {parseText(future)}
             </p>
 
