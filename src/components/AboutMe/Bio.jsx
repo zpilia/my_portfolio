@@ -69,6 +69,8 @@ const Bio = () => {
             <div className="mt-8 flex justify-center md:justify-start">
                 <a
                     href={CV}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     download="CV_Pilia.pdf"
                     className="cursor-pointer flex justify-between bg-gradient-to-r from-blue-500 to-cyan-400 px-3 py-2 md:px-4 md:py-2 rounded-full text-white tracking-wider shadow-xl hover:scale-105 transition-transform duration-500 hover:ring-2 ring-white w-[140px] md:w-[130px] items-center"
                 >
