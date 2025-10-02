@@ -29,23 +29,27 @@
       {
         "title": "BACCALAURÉAT",
         "date": "2017 à 2019",
-        "location": ["Lycée Mireille Grenet", "Compiègne", "France"]
+        "location": ["Lycée Mireille Grenet", "Compiègne", "France"],
+        "mapUrl": "https://maps.app.goo.gl/tFC3HcuS2VzNDwyX7"
       },
       {
         "title": "BAFA",
         "date": "2017 à 2020",
-        "location": ["UFCV Picardie", "Compiègne", "France"]
+        "location": ["UFCV Picardie", "Amiens", "France"],
+        "mapUrl": "https://maps.app.goo.gl/p7ph3Jp1pSihFkTF9"
       },
       {
         "title": "Niveau DUT Informatique",
         "date": "2019 à 2022",
-        "location": ["Université Polytechnique Hauts‑de‑France", "IUT de Maubeuge", "France"]
+        "location": ["Université Polytechnique Hauts-de France", "Maubeuge", "France"],
+        "mapUrl": "https://maps.app.goo.gl/4UEUbKvcURkAbByu5"
       },
       {
-        "title": "Intégrateur‑Développeur Web",
+        "title": "Intégrateur - Développeur web",
         "date": "Depuis Nov. 2023",
-        "location": ["Web@cademie Epitech Lille", "France"],
-        "current": true
+        "location": ["Web@cademie Epitech Lille", "Lille", "France"],
+        "current": true,
+        "mapUrl": "https://maps.app.goo.gl/VABA4G1UyMoFLy2c6"
       }
     ]
   }
