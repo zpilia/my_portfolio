@@ -5,5 +5,22 @@
     "intro": "Bonjour ! Je m'appelle Zoé et j'ai {age}. Je suis actuellement en formation d'Intégrateur‑Développeur Web à la Web@cademie de Lille afin d’atteindre mon objectif : Développeuse Full‑Stack.",
     "alt": "Depuis janvier 2025, je suis en alternance en tant que Développeuse Front-end Junior chez Iceberg Data Lab, à Paris.",
     "future": "À partir de janvier 2026, je vais suivre une formation de Concepteur d'Application JavaScript d'une durée de 15 mois. Dans ce cadre, je suis activement à la recherche d'une nouvelle alternance en développement Web, avec un rythme de 3 semaines en entreprise et 1 semaine en formation."
+  },
+  "languages": {
+    "title": "Langues parlées",
+    "levels": [
+      { "level": "B1", "flag": "england.svg" },
+      { "level": "A2", "flag": "spain.svg" }
+    ]
+  },
+  "hobbies": {
+    "title": "Centres d'intérêts",
+    "hobby1": "Danse",
+    "hobby2": "Lecture",
+    "translations": [
+      { "text": "Culture Asiatique", "flag": null },
+      { "text": "アジア文化", "flag": "japan.svg" },
+      { "text": "아시아 문화", "flag": "korea.svg" }
+    ]
   }
 }
