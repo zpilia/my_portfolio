@@ -22,5 +22,31 @@
       { "text": "アジア文化", "flag": "japan.svg" },
       { "text": "아시아 문화", "flag": "korea.svg" }
     ]
+  },
+  "career": {
+    "title": "Mon parcours",
+    "events": [
+      {
+        "title": "BACCALAURÉAT",
+        "date": "2017 à 2019",
+        "location": ["Lycée Mireille Grenet", "Compiègne", "France"]
+      },
+      {
+        "title": "BAFA",
+        "date": "2017 à 2020",
+        "location": ["UFCV Picardie", "Compiègne", "France"]
+      },
+      {
+        "title": "Niveau DUT Informatique",
+        "date": "2019 à 2022",
+        "location": ["Université Polytechnique Hauts‑de‑France", "IUT de Maubeuge", "France"]
+      },
+      {
+        "title": "Intégrateur‑Développeur Web",
+        "date": "Depuis Nov. 2023",
+        "location": ["Web@cademie Epitech Lille", "France"],
+        "current": true
+      }
+    ]
   }
 }
