@@ -4,7 +4,20 @@ import CV from '../../assets/files/CV_Pilia.pdf';
 import texts from '../../data/texts.json';
 
 const Bio = () => {
-    const { intro, alt, future } = texts.bio;
+    const { intro, alt, future, birthdate } = texts.bio;
+
+    const calculateAge = (birthdate) => {
+        const birth = new Date(birthdate);
+        const today = new Date();
+        let age = today.getFullYear() - birth.getFullYear();
+        const m = today.getMonth() - birth.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+            age--;
+        }
+        return age;
+    };
+
+    const age = calculateAge(birthdate);
 
     const highlight = (text) => (
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">
@@ -13,11 +26,13 @@ const Bio = () => {
     );
 
     const parseText = (text) => {
-        return text.split(/(Zoé|23 ans|Intégrateur‑Développeur Web|Développeuse Full‑Stack|janvier 2025|alternance en tant que Développeuse Front-end Junior|Iceberg Data Lab|janvier 2026|Concepteur d'Application JavaScript|15 mois|activement à la recherche d'une nouvelle alternance|3 semaines en entreprise|1 semaine en formation)/g)
+        return text
+            .replace("{age}", `${age} ans`)
+            .split(/(Zoé|[0-9]{2} ans|Intégrateur‑Développeur Web|Développeuse Full‑Stack|janvier 2025|alternance en tant que Développeuse Front-end Junior|Iceberg Data Lab|janvier 2026|Concepteur d'Application JavaScript|15 mois|activement à la recherche d'une nouvelle alternance|3 semaines en entreprise|1 semaine en formation)/g)
             .map((part, index) =>
                 [
                     "Zoé",
-                    "23 ans",
+                    `${age} ans`,
                     "Intégrateur‑Développeur Web",
                     "Développeuse Full‑Stack",
                     "janvier 2025",
