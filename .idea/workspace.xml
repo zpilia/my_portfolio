@@ -37,7 +37,7 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Applications/MAMP/htdocs/portfolio&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Applications/MAMP/htdocs/portfolio/src/assets/files&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -47,6 +47,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/files" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -66,7 +71,8 @@
       <workItem from="1757578721421" duration="5513000" />
       <workItem from="1757599012053" duration="23000" />
       <workItem from="1758363378427" duration="2852000" />
-      <workItem from="1759391089068" duration="1133000" />
+      <workItem from="1759391089068" duration="19648000" />
+      <workItem from="1759477854152" duration="2159000" />
     </task>
     <servers />
   </component>

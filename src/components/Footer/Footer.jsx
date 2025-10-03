@@ -15,7 +15,7 @@ const Footer = () => {
             name: 'GitHub',
             icon: <FaGithub className="w-6 h-6" />,
             href: 'https://github.com/zpilia',
-            hoverColor: 'gray'
+            hoverColor: '#9CA3AF' // gray-400
         },
         {
             name: 'Instagram',
@@ -41,9 +41,12 @@ const Footer = () => {
                         <div key={name} className="group relative inline-block">
                             <a
                                 href={href}
-                                className={`text-white transform transition-transform duration-300 group-hover:scale-125 hover:text-[${hoverColor}]`}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                className="transform transition-transform duration-300 group-hover:scale-125"
+                                style={{ color: 'white' }}
+                                onMouseEnter={(e) => e.currentTarget.style.color = hoverColor}
+                                onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
                             >
                                 {icon}
                             </a>
