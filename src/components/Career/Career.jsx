@@ -5,13 +5,28 @@ const Career = () => {
     const { title, events } = texts.career;
 
     const openMapInNewTab = (mapUrl) => {
+        if (!mapUrl) return;
         window.open(mapUrl, '_blank', 'noopener,noreferrer');
     };
 
     return (
-        <section id="career" className="min-h-screen flex flex-col items-center px-4 md:px-8 lg:px-24 py-16 text-white">
+        <section
+            id="career"
+            className="h-auto flex flex-col items-center px-4 md:px-8 lg:px-24 py-12 text-white"
+        >
             <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-                {title}
+                {title.split(/(parcours)/gi).map((part, index) =>
+                    part.toLowerCase() === 'parcours' ? (
+                        <span
+                            key={index}
+                            className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400"
+                        >
+                            {part}
+                        </span>
+                    ) : (
+                        <span key={index}>{part}</span>
+                    )
+                )}
             </h1>
 
             <div className="flex flex-col lg:flex-row lg:items-center justify-center w-full max-w-5xl space-y-8 lg:space-y-0 lg:space-x-4">
@@ -21,22 +36,35 @@ const Career = () => {
                             <span className="text-sm font-bold">✓</span>
                         </div>
 
-                        <div className={`p-4 rounded-lg shadow-md w-60 md:w-72 ${ev.current ? "bg-blue-500 bg-opacity-40 border-2 border-blue-300" : "bg-gray-800 bg-opacity-80"}`}>
+                        <div
+                            className={`p-4 rounded-lg shadow-md w-60 md:w-72 ${
+                                ev.current
+                                    ? "bg-blue-500 bg-opacity-40 border-2 border-blue-300"
+                                    : "bg-gray-800 bg-opacity-80"
+                            }`}
+                        >
                             <p className="text-lg md:text-xl font-bold">{ev.title}</p>
                             <p className="text-base md:text-lg">{ev.date}</p>
-                            {ev.location.map((line, i) => (
-                                <p
-                                    key={i}
-                                    className="text-white underline hover:cursor-pointer hover:text-cyan-400"
-                                    onClick={() => openMapInNewTab(ev.mapUrl)}
-                                >
-                                    {line}
-                                </p>
-                            ))}
+
+                            {ev.location.map((line, i) =>
+                                i === 0 && ev.mapUrl ? (
+                                    <p
+                                        key={i}
+                                        className="text-white underline hover:cursor-pointer hover:text-cyan-400"
+                                        onClick={() => openMapInNewTab(ev.mapUrl)}
+                                    >
+                                        {line}
+                                    </p>
+                                ) : (
+                                    <p key={i} className="text-white">
+                                        {line}
+                                    </p>
+                                )
+                            )}
                         </div>
 
                         {idx < events.length - 1 && (
-                            <div className={`absolute lg:relative bg-gradient-to-r from-blue-500 to-cyan-400 w-1 h-10 lg:h-1 lg:w-20 top-full mt-2 lg:mt-0 lg:ml-2`}></div>
+                            <div className="absolute lg:relative bg-gradient-to-r from-blue-500 to-cyan-400 w-1 h-10 lg:h-1 lg:w-20 top-full mt-2 lg:mt-0 lg:ml-2"></div>
                         )}
                     </div>
                 ))}

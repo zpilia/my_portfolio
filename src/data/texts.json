@@ -50,6 +50,11 @@
         "location": ["Web@cademie Epitech Lille", "Lille", "France"],
         "current": true,
         "mapUrl": "https://maps.app.goo.gl/VABA4G1UyMoFLy2c6"
+      },
+      {
+        "title": "Concepteur développeur d'applications",
+        "date": "Jan. 2026",
+        "location": ["Wild Code School", "À distance"]
       }
     ]
   }
