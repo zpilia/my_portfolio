@@ -64,11 +64,12 @@
     "jobs": [
       {
         "id": "1",
-        "title": "Alternante - Développeuse Front-End Junior",
+        "title": "Développeuse Front-End Junior (Alternance)",
         "company": "Iceberg Data Lab",
         "location": "Paris",
         "period": "De Jan. 2025 à Nov. 2025",
-        "description": "Maintenance des 2 plateformes utilisées par l'entreprise et leurs clients en Angular / Ruby on Rails / Tailwind"
+        "description": "Maintenance des 2 plateformes utilisées par l'entreprise et leurs clients en Angular / Ruby on Rails / Tailwind",
+        "current": true
       },
       {
         "id": "2",
