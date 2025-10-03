@@ -35,12 +35,10 @@ const Career = () => {
                         key={idx}
                         className="flex flex-col items-center text-center relative w-full sm:w-auto"
                     >
-                        {/* Point central avec numéro d'ordre */}
                         <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 flex items-center justify-center text-white mb-2">
                             <span className="text-sm font-bold">{idx + 1}</span>
                         </div>
 
-                        {/* Carte événement */}
                         <div
                             className={`p-4 rounded-lg shadow-md w-full max-w-xs sm:w-60 md:w-72 ${
                                 ev.current
@@ -68,7 +66,6 @@ const Career = () => {
                             )}
                         </div>
 
-                        {/* Connecteurs */}
                         {idx < events.length - 1 && (
                             <div className="absolute lg:relative bg-gradient-to-r from-blue-500 to-cyan-400 w-1 h-10 lg:h-1 lg:w-20 top-full mt-2 lg:mt-0 lg:ml-2"></div>
                         )}
