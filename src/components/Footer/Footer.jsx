@@ -15,7 +15,7 @@ const Footer = () => {
             name: 'GitHub',
             icon: <FaGithub className="w-6 h-6" />,
             href: 'https://github.com/zpilia',
-            hoverColor: '#9CA3AF' // gray-400
+            hoverColor: '#9CA3AF'
         },
         {
             name: 'Instagram',
