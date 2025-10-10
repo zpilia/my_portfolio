@@ -5,10 +5,19 @@ import { scrollToSectionSmoothly } from '../Effect/scrollToSectionSmoothly';
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('');
+    const [isScrolled, setIsScrolled] = useState(false);
     const headerRef = useRef(null);
 
     const toggleMenu = () => setIsOpen(prev => !prev);
     const closeMenu = () => setIsOpen(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     useEffect(() => {
         const handleHashChange = () => setActiveSection(window.location.hash);
@@ -41,7 +50,7 @@ const Header = () => {
     ];
 
     return (
-        <header ref={headerRef} className="fixed top-0 left-0 w-full z-30 bg-opacity-60">
+        <header ref={headerRef} className="fixed top-0 left-0 w-full z-30">
             <div className="container mx-auto px-5 py-4 flex justify-between items-center">
                 {!isOpen && (
                     <button onClick={toggleMenu} className="text-white text-3xl lg:hidden">
@@ -49,7 +58,11 @@ const Header = () => {
                     </button>
                 )}
 
-                <nav className="hidden lg:flex space-x-8 text-lg font-medium text-white bg-[#BBDEFB] bg-opacity-15 py-4 px-6 rounded-lg w-fit mx-auto">
+                <nav
+                    className={`hidden lg:flex space-x-8 text-lg font-medium text-white py-4 px-6 rounded-lg w-fit mx-auto backdrop-blur-md shadow-md transition-all duration-500 ${
+                        isScrolled ? 'bg-[#BBDEFB]/60' : 'bg-[#BBDEFB]/20'
+                    }`}
+                >
                     {links.map(({ hash, label }) => (
                         <a
                             key={hash}
@@ -66,9 +79,9 @@ const Header = () => {
             {isOpen && <div className="fixed inset-0 bg-black bg-opacity-60 z-20 pointer-events-none"></div>}
 
             <nav
-                className={`fixed top-0 left-0 w-64 h-full bg-[#BBDEFB] bg-opacity-15 backdrop-blur-md text-white py-6 px-4 transform ${
+                className={`fixed top-0 left-0 w-64 h-full bg-[#BBDEFB]/20 backdrop-blur-md text-white py-6 px-4 transform ${
                     isOpen ? 'translate-x-0' : '-translate-x-full'
-                } transition-transform duration-300 ease-in-out lg:hidden z-30`}
+                } transition-transform duration-300 ease-in-out lg:hidden z-30 shadow-lg`}
             >
                 <button onClick={closeMenu} className="absolute top-4 right-2 text-3xl text-white">
                     <FaTimes />
