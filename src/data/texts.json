@@ -66,6 +66,7 @@
         "id": "1",
         "title": "Développeuse Front-End Junior (Alternance)",
         "company": "Iceberg Data Lab",
+        "mapUrl": "https://maps.app.goo.gl/QqTGKmdvPsriyA1j7",
         "location": "Paris",
         "period": "De Jan. 2025 à Nov. 2025",
         "description": "Maintenance des 2 plateformes utilisées par l'entreprise et leurs clients en Angular / Ruby on Rails / Tailwind",
@@ -75,6 +76,7 @@
         "id": "2",
         "title": "Stagiaire Intégrateur - Développeur web",
         "company": "Web@cadémie",
+        "mapUrl": "https://maps.app.goo.gl/VABA4G1UyMoFLy2c6",
         "location": "Lille, France",
         "period": "Depuis Nov. 2023",
         "description": "Durant ces 2 années de formation, je suis amenée à développer différents projets tels que :\n\n- Interaction avec des API / Création d'API\n- CRUD / MVC / Responsive\n- Création d'un site complet E-commerce"
@@ -84,6 +86,7 @@
         "title": "Stagiaire en informatique",
         "company": "SOCIETE PLESSIER ET FILS",
         "location": "Compiègne, France",
+        "mapUrl": "https://maps.app.goo.gl/o9WKZF4paS7Tjcn68",
         "period": "De Avr. 2022 à Juin 2022",
         "description": "Développement d'un site internet en HTML / CSS / PHP / JS pour la société Plessier et Fils"
       },
@@ -91,6 +94,7 @@
         "id": "4",
         "title": "Développeuse web",
         "company": "Université Polytechnique Hauts-de France, IUT de Maubeuge",
+        "mapUrl": "https://maps.app.goo.gl/4UEUbKvcURkAbByu5",
         "location": "Maubeuge, France",
         "period": "2019 - 2023",
         "description": "Développement de sites Web sur différents thèmes :\n\n- Jeux Olympiques\n- Mythologies\n- Furry"
@@ -99,6 +103,7 @@
         "id": "5",
         "title": "Animatrice - Centre de loisirs",
         "company": "Centre de loisirs",
+        "mapUrl": "https://maps.app.goo.gl/iKJ4DwLvEHgfxpBs9",
         "location": "Compiègne, France",
         "period": "2017 - 2022",
         "description": "J’ai eu la responsabilité de plusieurs groupes de différents âges et j’ai eu l’occasion de travailler en équipe ainsi que de participer à des réunions."
