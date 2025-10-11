@@ -12,9 +12,7 @@ const Header = () => {
     const closeMenu = () => setIsOpen(false);
 
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
+        const handleScroll = () => setIsScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -26,10 +24,23 @@ const Header = () => {
         return () => window.removeEventListener('hashchange', handleHashChange);
     }, []);
 
-    const linkClasses = (hash) =>
-        `hover:underline underline-offset-4 decoration-white transition duration-300 ${
-            activeSection === hash ? 'text-blue-400 font-semibold' : ''
-        }`;
+    const linkClasses = (hash) => {
+        const isActive = activeSection === hash;
+        const underlineColor = isScrolled ? 'decoration-blue-600' : 'decoration-blue-400';
+        const hoverColor = isScrolled ? 'hover:text-blue-600 hover:decoration-blue-600' : 'hover:text-blue-400 hover:decoration-blue-400';
+
+        if (isActive) {
+            return `
+                font-semibold underline underline-offset-4 ${underlineColor}
+                ${isScrolled ? 'text-blue-600' : 'text-blue-400'}
+            `;
+        }
+
+        return `
+            text-white underline-offset-4 ${hoverColor}
+            hover:underline
+        `;
+    };
 
     const handleNavLinkClick = (hash) => (e) => {
         e.preventDefault();
@@ -59,7 +70,7 @@ const Header = () => {
                 )}
 
                 <nav
-                    className={`hidden lg:flex space-x-8 text-lg font-medium text-white py-4 px-6 rounded-lg w-fit mx-auto backdrop-blur-md shadow-md transition-all duration-500 ${
+                    className={`hidden lg:flex space-x-8 text-lg font-medium text-white py-4 px-6 rounded-lg w-fit mx-auto backdrop-blur-md shadow-md ${
                         isScrolled ? 'bg-[#BBDEFB]/60' : 'bg-[#BBDEFB]/20'
                     }`}
                 >
@@ -81,7 +92,7 @@ const Header = () => {
             <nav
                 className={`fixed top-0 left-0 w-64 h-full bg-[#BBDEFB]/20 backdrop-blur-md text-white py-6 px-4 transform ${
                     isOpen ? 'translate-x-0' : '-translate-x-full'
-                } transition-transform duration-300 ease-in-out lg:hidden z-30 shadow-lg`}
+                } duration-0 ease-none lg:hidden z-30 shadow-lg`}
             >
                 <button onClick={closeMenu} className="absolute top-4 right-2 text-3xl text-white">
                     <FaTimes />
