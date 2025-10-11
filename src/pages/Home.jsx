@@ -7,6 +7,7 @@ import { FaChevronDown } from 'react-icons/fa';
 import AboutMe from "../components/AboutMe/AboutMe";
 import Career from "../components/Career/Career";
 import Experience from "../components/Experience/Experience";
+import Skills from "../components/Skills/Skills";
 
 const Home = () => {
     return (
@@ -39,10 +40,8 @@ const Home = () => {
                     <AboutMe />
                     <Career />
                     <Experience />
+                    <Skills />
 
-                    <section id="skills" className="py-16 px-4">
-                        <h2 className="text-2xl md:text-3xl font-bold text-center text-white">Mes compétences</h2>
-                    </section>
 
                     <section id="projects" className="py-16 px-4">
                         <h2 className="text-2xl md:text-3xl font-bold text-center text-white">Mes projets réalisés</h2>

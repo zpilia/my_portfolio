@@ -119,5 +119,66 @@
         "description": "J’ai eu la responsabilité de plusieurs groupes de différents âges et j’ai eu l’occasion de travailler en équipe ainsi que de participer à des réunions."
       }
     ]
+  },
+  "skills": {
+    "title": "compétences",
+    "categories": [
+      {
+        "type": "Langages & Programmation",
+        "items": [
+          { "name": "JavaScript", "icon": "javascript.png" },
+          { "name": "TypeScript", "icon": "typescript.png" },
+          { "name": "PHP", "icon": "php.png" },
+          { "name": "CSS", "icon": "css.png" },
+          { "name": "SQL", "icon": "sql.png" },
+          { "name": "HTML", "icon": "html.png" },
+          { "name": "Python", "icon": "python.png" },
+          { "name": "Ruby", "icon": "ruby.png" },
+          { "name": "Go", "icon": "go.png" },
+          { "name": "Java", "icon": "java.png" },
+          { "name": "C", "icon": "c.png" }
+        ]
+      },
+      {
+        "type": "Frameworks & Bibliothèques",
+        "items": [
+          { "name": "React", "icon": "react.png" },
+          { "name": "Angular", "icon": "angular.png" },
+          { "name": "Next.js", "icon": "nextjs.png" },
+          { "name": "NestJS", "icon": "nestjs.png" },
+          { "name": "Node.js", "icon": "nodejs.png" },
+          { "name": "Express", "icon": "express.png" },
+          { "name": "Symfony", "icon": "symfony.png" },
+          { "name": "Laravel", "icon": "laravel.png" },
+          { "name": "Django", "icon": "django.png" },
+          { "name": "Rails", "icon": "rails.png" },
+          { "name": "Spring Boot", "icon": "spring.png" },
+          { "name": "Bootstrap", "icon": "bootstrap.png" },
+          { "name": "TailwindCSS", "icon": "tailwind.png" }
+        ]
+      },
+      {
+        "type": "Outils & Technologies",
+        "items": [
+          { "name": "Docker", "icon": "docker.png" },
+          { "name": "Wordpress", "icon": "wordpress.png" },
+          { "name": "Figma", "icon": "figma.png" }
+        ]
+      },
+      {
+        "type": "Logiciels & Outils de gestion",
+        "items": [
+          { "name": "Word", "icon": "word.png" },
+          { "name": "Excel", "icon": "excel.png" },
+          { "name": "PowerPoint", "icon": "powerpoint.png" },
+          { "name": "Trello", "icon": "trello.png" },
+          { "name": "Notion", "icon": "notion.png" },
+          { "name": "Jira", "icon": "jira.png" },
+          { "name": "YouTrack", "icon": "youtrack.png" },
+          { "name": "Photoshop", "icon": "photoshop.png" },
+          { "name": "Canva", "icon": "canva.png" }
+        ]
+      }
+    ]
   }
 }
