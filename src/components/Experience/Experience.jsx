@@ -60,7 +60,6 @@ const Experience = () => {
                                 {job.current ? (
                                     <div className="p-1 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 h-full">
                                         <div className="p-5 rounded-lg bg-gray-800 w-full h-full flex flex-col justify-center items-center text-center gap-y-6">
-
                                             <h3 className="text-xl md:text-2xl font-extrabold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent mb-2 drop-shadow-md">
                                                 {job.title}
                                             </h3>
@@ -91,8 +90,7 @@ const Experience = () => {
                                         </div>
                                     </div>
                                 ) : (
-                                    <div className="p-5 rounded-lg shadow-md bg-gray-800 w-full h-full flex flex-col justify-center items-center text-center gap-y-6">
-
+                                    <div className="p-5 rounded-lg shadow-md bg-gray-800 w-full h-full flex flex-col justify-center items-center text-center gap-y-6 border border-cyan-400/40 hover:border-cyan-300 transition-all duration-300">
                                         <h3 className="text-xl md:text-2xl font-extrabold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent mb-2 drop-shadow-md">
                                             {job.title}
                                         </h3>
