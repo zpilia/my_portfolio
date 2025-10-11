@@ -1,11 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards } from 'swiper/modules';
-import { FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FaClock } from 'react-icons/fa';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import texts from '../../data/texts.json';
-
 
 const getExperienceDuration = (startDate, endDate) => {
     if (!startDate) return '';
@@ -46,7 +45,7 @@ const Experience = () => {
                 </span>
             </h2>
 
-            <div className="w-full max-w-sm h-[450px]">
+            <div className="w-full max-w-[320px] sm:max-w-[380px] md:max-w-[450px] lg:max-w-[500px] h-[380px] sm:h-[420px] md:h-[450px] lg:h-[480px]">
                 <Swiper
                     effect="cards"
                     grabCursor={true}
@@ -70,10 +69,9 @@ const Experience = () => {
                                                 {job.mapUrl ? (
                                                     <button
                                                         onClick={() => openMapInNewTab(job.mapUrl)}
-                                                        className="flex items-center gap-2 text-cyan-400 font-medium underline hover:text-cyan-200 transition-colors duration-300"
+                                                        className="text-cyan-400 font-medium underline hover:text-cyan-200 transition-colors duration-300"
                                                     >
-                                                        <FaMapMarkerAlt className="text-cyan-400 text-sm" />
-                                                        <span>{job.company}</span>
+                                                        {job.company}
                                                     </button>
                                                 ) : (
                                                     <p className="text-cyan-400 font-medium">{job.company}</p>
@@ -103,10 +101,9 @@ const Experience = () => {
                                             {job.mapUrl ? (
                                                 <button
                                                     onClick={() => openMapInNewTab(job.mapUrl)}
-                                                    className="flex items-center gap-2 text-cyan-400 font-medium underline hover:text-cyan-200 transition-colors duration-300"
+                                                    className="text-cyan-400 font-medium underline hover:text-cyan-200 transition-colors duration-300"
                                                 >
-                                                    <FaMapMarkerAlt className="text-cyan-400 text-sm" />
-                                                    <span>{job.company}</span>
+                                                    {job.company}
                                                 </button>
                                             ) : (
                                                 <p className="text-cyan-400 font-medium">{job.company}</p>
