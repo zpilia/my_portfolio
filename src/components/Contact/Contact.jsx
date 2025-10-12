@@ -1,16 +1,30 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { ToastContainer, toast, Slide } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import texts from '../../data/texts.json';
 
 const Contact = () => {
     const { title, email, phone, location } = texts.contact;
     const formRef = useRef();
-    const [statusMessage, setStatusMessage] = useState('');
-    const [isSuccess, setIsSuccess] = useState(false);
+    const [isSending, setIsSending] = useState(false);
+
+    const customToastStyle = {
+        background: 'linear-gradient(135deg, #0f172a, #1e293b)',
+        border: '1px solid #06b6d4',
+        color: '#e0f2fe',
+        borderRadius: '10px',
+        padding: '14px 18px',
+        boxShadow: '0 0 12px rgba(6, 182, 212, 0.3)',
+        fontFamily: "'Inter', 'Segoe UI', sans-serif",
+        fontSize: '15px',
+        lineHeight: '1.4',
+    };
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setIsSending(true);
 
         emailjs
             .sendForm(
@@ -21,33 +35,44 @@ const Contact = () => {
             )
             .then(
                 () => {
-                    setIsSuccess(true);
-                    setStatusMessage(
-                        "✅ Votre message a bien été envoyé ! Je vous recontacterai dans les plus brefs délais."
+                    toast.success(
+                        "Votre message a bien été envoyé ! Je vous recontacterai dès que possible.",
+                        {
+                            position: 'bottom-right',
+                            autoClose: 6000,
+                            hideProgressBar: true,
+                            style: customToastStyle,
+                            icon: '✅',
+                            transition: Slide,
+                        }
                     );
                     e.target.reset();
-
-                    setTimeout(() => {
-                        setStatusMessage('');
-                        setIsSuccess(false);
-                    }, 7000);
                 },
                 (error) => {
                     console.error('Erreur EmailJS:', error);
-                    setIsSuccess(false);
-                    setStatusMessage(
-                        "❌ Une erreur est survenue. Veuillez réessayer plus tard."
+                    toast.error(
+                        "Une erreur est survenue. Merci de réessayer un peu plus tard.",
+                        {
+                            position: 'bottom-right',
+                            autoClose: 6000,
+                            hideProgressBar: true,
+                            style: customToastStyle,
+                            icon: '⚠️',
+                            transition: Slide,
+                        }
                     );
                 }
-            );
+            )
+            .finally(() => setIsSending(false));
     };
 
     return (
         <section
             id="contact"
-            className="py-20 px-4 sm:px-6 md:px-12 lg:px-24 text-white flex flex-col items-center"
+            className="py-20 px-4 sm:px-6 md:px-12 lg:px-24 text-white flex flex-col items-center relative"
         >
-            {/* 🔹 Titre principal */}
+            <ToastContainer />
+
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">
                 {title.split(' ')[0]}{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">
@@ -55,10 +80,8 @@ const Contact = () => {
                 </span>
             </h2>
 
-            {/* 🔹 Conteneur principal */}
             <div className="w-full flex flex-col lg:flex-row justify-between items-start gap-12 max-w-6xl">
 
-                {/* 🧾 Formulaire de contact */}
                 <form
                     ref={formRef}
                     onSubmit={sendEmail}
@@ -125,23 +148,17 @@ const Contact = () => {
 
                     <button
                         type="submit"
-                        className="mt-4 bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-semibold py-3 rounded-lg shadow-md hover:shadow-lg hover:opacity-95 transition-all duration-200"
+                        disabled={isSending}
+                        className={`mt-4 font-semibold py-3 rounded-lg shadow-md transition-all duration-200 ${
+                            isSending
+                                ? 'bg-gray-500 cursor-not-allowed'
+                                : 'bg-gradient-to-r from-blue-500 to-cyan-400 hover:opacity-90'
+                        }`}
                     >
-                        Envoyer le message
+                        {isSending ? 'Envoi en cours...' : 'Envoyer le message'}
                     </button>
-
-                    {statusMessage && (
-                        <p
-                            className={`text-center mt-4 text-sm font-medium transition-opacity duration-300 ${
-                                isSuccess ? 'text-cyan-300' : 'text-red-400'
-                            }`}
-                        >
-                            {statusMessage}
-                        </p>
-                    )}
                 </form>
 
-                {/* 📍 Infos & Carte */}
                 <div className="flex flex-col gap-6 w-full lg:w-1/2 bg-gray-800 bg-opacity-80 p-8 rounded-xl shadow-lg border border-gray-700">
                     <h3 className="text-xl font-semibold text-cyan-300 mb-4">Mes informations</h3>
 
