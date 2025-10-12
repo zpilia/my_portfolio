@@ -9,6 +9,7 @@ import Career from "../components/Career/Career";
 import Experience from "../components/Experience/Experience";
 import Skills from "../components/Skills/Skills";
 import Contact from "../components/Contact/Contact";
+import Projects from "../components/Projects/Projects";
 
 const Home = () => {
     return (
@@ -42,12 +43,7 @@ const Home = () => {
                     <Career />
                     <Experience />
                     <Skills />
-
-
-                    <section id="projects" className="py-16 px-4">
-                        <h2 className="text-2xl md:text-3xl font-bold text-center text-white">Mes projets réalisés</h2>
-                    </section>
-
+                    <Projects />
                     <Contact />
                 </main>
                 <Footer />
