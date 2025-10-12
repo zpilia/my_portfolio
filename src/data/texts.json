@@ -180,5 +180,12 @@
         ]
       }
     ]
+  },
+  "contact": {
+    "title": "Me contacter",
+    "email": "zpilia2@gmail.com",
+    "phone": "+33 7 81 69 15 51",
+    "location": "Compiègne, France",
+    "mapUrl": "https://maps.app.goo.gl/Y9dh9aQACo4YAQ8U9"
   }
 }
