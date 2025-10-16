@@ -10,13 +10,13 @@ const ProjectCard = ({ image, title, description, technologies, status, codeLink
                 overflow-hidden transition-transform transform hover:scale-[1.03]
                 hover:shadow-2xl duration-300
                 w-full
-                max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl
-                h-[420px] sm:h-[480px] md:h-[520px] lg:h-[560px] xl:h-[600px]
+                max-w-[90%] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl
+                h-auto
                 flex flex-col
             "
         >
             {/* 🖼️ Image du projet */}
-            <div className="w-full h-1/2 overflow-hidden">
+            <div className="w-full h-40 sm:h-52 md:h-60 lg:h-64 xl:h-72 overflow-hidden">
                 <img
                     src={image}
                     alt={title}
@@ -25,12 +25,12 @@ const ProjectCard = ({ image, title, description, technologies, status, codeLink
             </div>
 
             {/* 📄 Contenu du projet */}
-            <div className="p-4 sm:p-5 md:p-6 flex flex-col justify-between flex-1">
+            <div className="p-4 sm:p-6 md:p-7 flex flex-col justify-between flex-1">
                 {/* 🔹 Titre et statut */}
                 <div className="flex justify-between items-center mb-3">
                     <h3
                         className="
-                            text-lg sm:text-xl md:text-2xl
+                            text-base sm:text-lg md:text-xl lg:text-2xl
                             font-semibold text-transparent bg-clip-text
                             bg-gradient-to-r from-blue-400 to-cyan-300
                         "
@@ -49,13 +49,20 @@ const ProjectCard = ({ image, title, description, technologies, status, codeLink
                 </div>
 
                 {/* 📝 Description */}
-                <p className="text-gray-300 text-xs sm:text-sm md:text-base mb-4 leading-relaxed line-clamp-4">
+                <p
+                    className="
+                        text-gray-300
+                        text-xs sm:text-sm md:text-base
+                        mb-4 leading-relaxed
+                        line-clamp-4 sm:line-clamp-5 md:line-clamp-6
+                    "
+                >
                     {description}
                 </p>
 
                 {/* ⚙️ Technologies */}
                 {technologies && technologies.length > 0 && (
-                    <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-5">
                         {technologies.map((tech, index) => (
                             <span
                                 key={index}
