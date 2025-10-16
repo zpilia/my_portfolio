@@ -181,6 +181,38 @@
       }
     ]
   },
+  "projects": {
+    "title": "projets réalisés",
+    "items": [
+      {
+        "image": "test.jpg",
+        "title": "Portfolio personnel",
+        "description": "Conception et développement d’un portfolio moderne en React avec intégration d’EmailJS, SwiperJS et design responsive.",
+        "technologies": ["React", "TailwindCSS", "EmailJS", "SwiperJS"],
+        "status": "Completed",
+        "demoLink": "https://ton-site.com/portfolio",
+        "codeLink": "https://github.com/zoepilia/portfolio"
+      },
+      {
+        "image": "test.jpg",
+        "title": "Application météo",
+        "description": "Application intuitive en React utilisant l’API OpenWeatherMap, géolocalisation automatique, interface moderne.",
+        "technologies": ["React", "OpenWeatherMap API", "CSS"],
+        "status": "In Progress",
+        "demoLink": "https://ton-site.com/weather",
+        "codeLink": "https://github.com/zoepilia/weather-app"
+      },
+      {
+        "image": "test.jpg",
+        "title": "Dashboard analytique",
+        "description": "Tableau de bord interactif en React + Chart.js + Firebase pour visualiser des données en temps réel.",
+        "technologies": ["React", "Chart.js", "Firebase"],
+        "status": "Completed",
+        "demoLink": "https://ton-site.com/dashboard",
+        "codeLink": "https://github.com/zoepilia/analytics-dashboard"
+      }
+    ]
+  },
   "contact": {
     "title": "Me contacter",
     "email": "zpilia2@gmail.com",
