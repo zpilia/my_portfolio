@@ -190,5 +190,29 @@
     "phone": "+33 7 81 69 15 51",
     "location": "Compiègne, France",
     "mapUrl": "https://maps.app.goo.gl/Y9dh9aQACo4YAQ8U9"
+  },
+  "footer": {
+    "socials": [
+      {
+        "name": "LinkedIn",
+        "href": "https://www.linkedin.com/in/zoé-pilia-1780161b0",
+        "hoverColor": "#0077B5"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/zpilia",
+        "hoverColor": "#9CA3AF"
+      },
+      {
+        "name": "Instagram",
+        "href": "https://www.instagram.com/kimlai.2001/",
+        "hoverColor": "#E4405F"
+      },
+      {
+        "name": "X (Twitter)",
+        "href": "https://x.com/zoe_pilia",
+        "hoverColor": "#1DA1F2"
+      }
+    ]
   }
 }
