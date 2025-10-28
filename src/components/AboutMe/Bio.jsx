@@ -28,20 +28,23 @@ const Bio = () => {
     const parseText = (text) => {
         return text
             .replace("{age}", `${age} ans`)
-            .split(/(Zoé|[0-9]{2} ans|Intégrateur‑Développeur Web|Développeuse Full‑Stack|janvier 2025|alternance en tant que Développeuse Front-end Junior|Iceberg Data Lab|janvier 2026|Concepteur d'Application JavaScript|15 mois|activement à la recherche d'une nouvelle alternance|3 semaines en entreprise|1 semaine en formation)/g)
+            .split(/(Zoé|[0-9]{2} ans|Intégrateur-Développeur Web|Développeuse Full-Stack|janvier 2025|alternance en tant que Développeuse Front-end Junior|Iceberg Data Lab|novembre 2025|Concepteur Développeur d’Applications|Éco-conception des services numériques|18 mois|Investir dans l'ancien|investissement locatif clé en main|immobilier ancien|3 semaines en entreprise|1 semaine en formation)/g)
             .map((part, index) =>
                 [
                     "Zoé",
                     `${age} ans`,
-                    "Intégrateur‑Développeur Web",
-                    "Développeuse Full‑Stack",
+                    "Intégrateur-Développeur Web",
+                    "Développeuse Full-Stack",
                     "janvier 2025",
                     "alternance en tant que Développeuse Front-end Junior",
                     "Iceberg Data Lab",
-                    "janvier 2026",
-                    "Concepteur d'Application JavaScript",
-                    "15 mois",
-                    "activement à la recherche d'une nouvelle alternance",
+                    "novembre 2025",
+                    "Concepteur Développeur d’Applications",
+                    "Éco-conception des services numériques",
+                    "18 mois",
+                    "Investir dans l'ancien",
+                    "investissement locatif clé en main",
+                    "immobilier ancien",
                     "3 semaines en entreprise",
                     "1 semaine en formation"
                 ].includes(part)
