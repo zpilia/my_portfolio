@@ -28,12 +28,35 @@ const getExperienceDuration = (startDate, endDate) => {
     return 'Moins d’un mois';
 };
 
+const getJobStatus = (startDate, endDate) => {
+    const today = new Date();
+    const start = new Date(startDate);
+    const end = endDate ? new Date(endDate) : null;
+
+    if (start > today) return 'upcoming';
+    if (start <= today && (!end || today <= end)) return 'current';
+    return 'past';
+};
+
 const Experience = () => {
     const { title, jobs } = texts.experience;
 
+    const jobsWithStatus = jobs.map((job) => ({
+        ...job,
+        status: getJobStatus(job.startDate, job.endDate),
+    }));
+
+    const sortedChronologically = [...jobsWithStatus].sort(
+        (a, b) => new Date(a.startDate) - new Date(b.startDate)
+    );
+
+    const upcomingJobs = sortedChronologically.filter((j) => j.status === 'upcoming');
+    const currentJobs = sortedChronologically.filter((j) => j.status === 'current');
+    const pastJobs = sortedChronologically.filter((j) => j.status === 'past');
+    const orderedJobs = [...upcomingJobs, ...currentJobs, ...pastJobs];
+
     const openMapInNewTab = (mapUrl) => {
-        if (!mapUrl) return;
-        window.open(mapUrl, '_blank', 'noopener,noreferrer');
+        if (mapUrl) window.open(mapUrl, '_blank', 'noopener,noreferrer');
     };
 
     return (
@@ -51,46 +74,24 @@ const Experience = () => {
                     grabCursor={true}
                     modules={[EffectCards]}
                     className="w-full h-full"
+                    initialSlide={
+                        orderedJobs.findIndex((job) => job.status === 'current') || 0
+                    }
                 >
-                    {jobs.map((job) => {
+                    {orderedJobs.map((job) => {
                         const duration = getExperienceDuration(job.startDate, job.endDate);
+
+                        const borderStyle =
+                            job.status === 'current'
+                                ? 'border-2 border-transparent bg-gradient-to-r from-blue-500 to-cyan-400 p-[2px]'
+                                : 'border border-cyan-400/40 hover:border-cyan-300 transition-all duration-300';
 
                         return (
                             <SwiperSlide key={job.id}>
-                                {job.current ? (
-                                    <div className="p-1 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 h-full">
-                                        <div className="p-5 rounded-lg bg-gray-800 w-full h-full flex flex-col justify-center items-center text-center gap-y-6">
-                                            <h3 className="text-xl md:text-2xl font-extrabold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent mb-2 drop-shadow-md">
-                                                {job.title}
-                                            </h3>
-
-                                            <div className="flex flex-col items-center">
-                                                {job.mapUrl ? (
-                                                    <button
-                                                        onClick={() => openMapInNewTab(job.mapUrl)}
-                                                        className="text-cyan-400 font-medium underline hover:text-cyan-200 transition-colors duration-300"
-                                                    >
-                                                        {job.company}
-                                                    </button>
-                                                ) : (
-                                                    <p className="text-cyan-400 font-medium">{job.company}</p>
-                                                )}
-                                                <p className="text-sm">{job.location}</p>
-                                                <p className="text-xs italic mt-1">{job.period}</p>
-
-                                                <div className="flex items-center gap-1 mt-1 text-gray-300 text-xs">
-                                                    <FaClock className="text-cyan-400" />
-                                                    <span>{duration}</span>
-                                                </div>
-                                            </div>
-
-                                            <p className="text-sm whitespace-pre-line text-justify overflow-y-auto max-h-28">
-                                                {job.description}
-                                            </p>
-                                        </div>
-                                    </div>
-                                ) : (
-                                    <div className="p-5 rounded-lg shadow-md bg-gray-800 w-full h-full flex flex-col justify-center items-center text-center gap-y-6 border border-cyan-400/40 hover:border-cyan-300 transition-all duration-300">
+                                <div
+                                    className={`rounded-lg shadow-md bg-gray-800 w-full h-full flex flex-col justify-center items-center text-center gap-y-6 ${borderStyle}`}
+                                >
+                                    <div className="w-full h-full flex flex-col justify-center items-center text-center gap-y-6 p-5 rounded-lg bg-gray-800">
                                         <h3 className="text-xl md:text-2xl font-extrabold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent mb-2 drop-shadow-md">
                                             {job.title}
                                         </h3>
@@ -115,11 +116,11 @@ const Experience = () => {
                                             </div>
                                         </div>
 
-                                        <p className="text-sm whitespace-pre-line text-justify overflow-y-auto max-h-30">
+                                        <p className="text-sm whitespace-pre-line text-justify overflow-y-auto max-h-28">
                                             {job.description}
                                         </p>
                                     </div>
-                                )}
+                                </div>
                             </SwiperSlide>
                         );
                     })}

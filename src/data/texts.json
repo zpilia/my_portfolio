@@ -46,15 +46,15 @@
       },
       {
         "title": "Intégrateur - Développeur web",
-        "date": "Depuis Nov. 2023",
+        "date": "Nov. 2023 à Nov. 2025",
         "location": ["Web@cademie Epitech Lille", "Lille", "France"],
         "current": true,
         "mapUrl": "https://maps.app.goo.gl/VABA4G1UyMoFLy2c6"
       },
       {
-        "title": "Concepteur développeur d'applications",
-        "date": "Nov. 2025",
-        "location": ["Wild Code School", "À distance"],
+        "title": "Concepteur Développeur d’Applications – option Éco-conception des services numériques",
+        "date": "Nov. 2025 – Avril 2027",
+        "location": ["Simplon", "À distance"],
         "mapUrl": ""
       }
     ]
@@ -64,6 +64,17 @@
     "jobs": [
       {
         "id": "1",
+        "title": "Développeuse Full-Stack (Alternance)",
+        "company": "Investir dans l'ancien",
+        "mapUrl": "https://maps.app.goo.gl/MfHgmWvyUU9CitNR9",
+        "location": "Paris",
+        "startDate": "2025-11-24",
+        "endDate": "2027-04-09",
+        "period": "De Nov. 2025 à Avril 2027",
+        "description": "Maintenance / Déploiements des 5 plateformes utilisées par l'entreprise et leurs clients en React / Tailwind / NodeJS / NextJS / PHP / SQL"
+      },
+      {
+        "id": "2",
         "title": "Développeuse Front-End Junior (Alternance)",
         "company": "Iceberg Data Lab",
         "mapUrl": "https://maps.app.goo.gl/QqTGKmdvPsriyA1j7",
@@ -71,44 +82,43 @@
         "startDate": "2025-01-06",
         "endDate": "2025-11-07",
         "period": "De Jan. 2025 à Nov. 2025",
-        "description": "Maintenance des 2 plateformes utilisées par l'entreprise et leurs clients en Angular / Ruby on Rails / Tailwind",
-        "current": true
+        "description": "Maintenance des 2 plateformes utilisées par l'entreprise et leurs clients en Angular / Ruby on Rails / Tailwind"
       },
       {
-        "id": "2",
+        "id": "3",
         "title": "Stagiaire Intégrateur - Développeur web",
         "company": "Web@cadémie",
         "mapUrl": "https://maps.app.goo.gl/VABA4G1UyMoFLy2c6",
         "startDate": "2023-11-20",
         "endDate": "2025-11-14",
         "location": "Lille, France",
-        "period": "Depuis Nov. 2023",
-        "description": "Durant ces 2 années de formation, je suis amenée à développer différents projets tels que :\n\n- Interaction avec des API / Création d'API\n- CRUD / MVC / Responsive\n- Création d'un site complet E-commerce"
+        "period": "De Nov. 2023 à Nov. 2025",
+        "description": "Durant ces 2 années de formation, j’ai développé différents projets :\n\n- Interaction avec des API / Création d'API\n- CRUD / MVC / Responsive\n- Création d’un site complet E-commerce"
       },
       {
-        "id": "3",
+        "id": "4",
         "title": "Stagiaire en informatique",
-        "company": "SOCIETE PLESSIER ET FILS",
+        "company": "Société Plessier et Fils",
         "location": "Compiègne, France",
         "mapUrl": "https://maps.app.goo.gl/o9WKZF4paS7Tjcn68",
         "startDate": "2022-04",
         "endDate": "2022-06",
         "period": "De Avr. 2022 à Juin 2022",
-        "description": "Développement d'un site internet en HTML / CSS / PHP / JS pour la société Plessier et Fils"
+        "description": "Développement d’un site internet en HTML / CSS / PHP / JS pour la société Plessier et Fils"
       },
       {
-        "id": "4",
-        "title": "Développeuse web",
-        "company": "Université Polytechnique Hauts-de France, IUT de Maubeuge",
+        "id": "5",
+        "title": "Développeuse web (Projets universitaires)",
+        "company": "Université Polytechnique Hauts-de-France, IUT de Maubeuge",
         "mapUrl": "https://maps.app.goo.gl/4UEUbKvcURkAbByu5",
         "location": "Maubeuge, France",
         "startDate": "2019",
         "endDate": "2023",
         "period": "2019 - 2023",
-        "description": "Développement de sites Web sur différents thèmes :\n\n- Jeux Olympiques\n- Mythologies\n- Furry"
+        "description": "Développement de sites web sur divers thèmes :\n\n- Jeux Olympiques\n- Mythologies\n- Furry"
       },
       {
-        "id": "5",
+        "id": "6",
         "title": "Animatrice - Centre de loisirs",
         "company": "Centre de loisirs",
         "mapUrl": "https://maps.app.goo.gl/iKJ4DwLvEHgfxpBs9",
@@ -116,7 +126,7 @@
         "startDate": "2017",
         "endDate": "2022",
         "period": "2017 - 2022",
-        "description": "J’ai eu la responsabilité de plusieurs groupes de différents âges et j’ai eu l’occasion de travailler en équipe ainsi que de participer à des réunions."
+        "description": "Responsable de groupes d’enfants de différents âges, travail en équipe et participation à des réunions pédagogiques."
       }
     ]
   },
