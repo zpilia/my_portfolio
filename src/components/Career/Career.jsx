@@ -1,12 +1,34 @@
 import React from 'react';
 import texts from '../../data/texts.json';
 
+const getDiplomaStatus = (startDate, endDate) => {
+    const now = new Date();
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    if (now < start) return 'upcoming';
+    if (now >= start && now <= end) return 'current';
+    return 'past';
+};
+
+const formatDateRange = (startDate, endDate) => {
+    const options = { year: 'numeric', month: 'short' };
+    const start = new Date(startDate).toLocaleDateString('fr-FR', options);
+    const end = new Date(endDate).toLocaleDateString('fr-FR', options);
+    return `${start} – ${end}`;
+};
+
 const Career = () => {
     const { title, events } = texts.career;
 
+    const eventsWithStatus = events.map((ev) => ({
+        ...ev,
+        status: getDiplomaStatus(ev.startDate, ev.endDate),
+        formattedDate: formatDateRange(ev.startDate, ev.endDate),
+    }));
+
     const openMapInNewTab = (mapUrl) => {
-        if (!mapUrl) return;
-        window.open(mapUrl, '_blank', 'noopener,noreferrer');
+        if (mapUrl) window.open(mapUrl, '_blank', 'noopener,noreferrer');
     };
 
     return (
@@ -30,7 +52,7 @@ const Career = () => {
             </h1>
 
             <div className="flex flex-col lg:flex-row lg:flex-wrap items-center justify-center w-full max-w-6xl gap-8">
-                {events.map((ev, idx) => (
+                {eventsWithStatus.map((ev, idx) => (
                     <div
                         key={idx}
                         className="flex flex-col items-center text-center relative w-full sm:w-auto"
@@ -40,14 +62,14 @@ const Career = () => {
                         </div>
 
                         <div
-                            className={`p-4 rounded-lg shadow-md w-full max-w-xs sm:w-60 md:w-72 ${
-                                ev.current
-                                    ? 'bg-blue-500 bg-opacity-40 border-2 border-blue-300'
-                                    : 'bg-gray-800 bg-opacity-80'
+                            className={`p-4 rounded-lg shadow-md w-full max-w-xs sm:w-60 md:w-72 border transition-all duration-300 ${
+                                ev.status === 'current'
+                                    ? 'bg-blue-500 bg-opacity-40 border-blue-300'
+                                    : 'bg-gray-800 bg-opacity-80 border-cyan-400/30 hover:border-cyan-300'
                             }`}
                         >
                             <p className="text-lg md:text-xl font-bold">{ev.title}</p>
-                            <p className="text-base md:text-lg">{ev.date}</p>
+                            <p className="text-base md:text-lg">{ev.formattedDate}</p>
 
                             {ev.location.map((line, i) =>
                                 i === 0 && ev.mapUrl ? (

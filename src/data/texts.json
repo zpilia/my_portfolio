@@ -28,32 +28,36 @@
     "events": [
       {
         "title": "BACCALAURÉAT",
-        "date": "2017 à 2019",
+        "startDate": "2017-09-01",
+        "endDate": "2019-06-30",
         "location": ["Lycée Mireille Grenet", "Compiègne", "France"],
         "mapUrl": "https://maps.app.goo.gl/tFC3HcuS2VzNDwyX7"
       },
       {
         "title": "BAFA",
-        "date": "2017 à 2020",
+        "startDate": "2017-07-01",
+        "endDate": "2020-06-30",
         "location": ["UFCV Picardie", "Amiens", "France"],
         "mapUrl": "https://maps.app.goo.gl/p7ph3Jp1pSihFkTF9"
       },
       {
         "title": "Niveau DUT Informatique",
-        "date": "2019 à 2022",
+        "startDate": "2019-09-01",
+        "endDate": "2022-06-30",
         "location": ["Université Polytechnique Hauts-de France", "Maubeuge", "France"],
         "mapUrl": "https://maps.app.goo.gl/4UEUbKvcURkAbByu5"
       },
       {
         "title": "Intégrateur - Développeur web",
-        "date": "Nov. 2023 à Nov. 2025",
+        "startDate": "2023-11-20",
+        "endDate": "2025-11-14",
         "location": ["Web@cademie Epitech Lille", "Lille", "France"],
-        "current": true,
         "mapUrl": "https://maps.app.goo.gl/VABA4G1UyMoFLy2c6"
       },
       {
-        "title": "Concepteur Développeur d’Applications – option Éco-conception des services numériques",
-        "date": "Nov. 2025 – Avril 2027",
+        "title": "Concepteur Développeur d’Applications - option Éco-conception des services numériques",
+        "startDate": "2025-11-17",
+        "endDate": "2027-04-16",
         "location": ["Simplon", "À distance"],
         "mapUrl": ""
       }
