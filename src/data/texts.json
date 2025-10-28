@@ -1,0 +1,232 @@
+{
+  "textReveal": "À travers le développement Web, je m'efforce de transformer chaque projet en une histoire captivante, alliant créativité et innovation pour inspirer et engager.",
+  "bio": {
+    "birthdate": "2001-01-21",
+    "intro": "Bonjour ! Je m'appelle Zoé et j'ai {age}. Je suis actuellement en formation d'Intégrateur-Développeur Web à la Web@cademie de Lille afin d’atteindre mon objectif : devenir Développeuse Full-Stack.",
+    "alt": "Depuis janvier 2025, je suis en alternance en tant que Développeuse Front-end Junior chez Iceberg Data Lab, à Paris.",
+    "future": "À partir de novembre 2025, je suivrai une formation de Concepteur Développeur d’Applications – option “Éco-conception des services numériques”, d’une durée de 18 mois en alternance. Mon alternance se déroulera chez Investir dans l'ancien, spécialiste de l’investissement locatif clé en main dans l’immobilier ancien, avec un rythme de 3 semaines en entreprise et 1 semaine en formation."
+  },
+  "languages": {
+    "title": "Langues parlées",
+    "levels": [
+      { "level": "B1", "flag": "england.svg" },
+      { "level": "A2", "flag": "spain.svg" }
+    ]
+  },
+  "hobbies": {
+    "title": "Centres d'intérêts",
+    "hobby1": "Danse",
+    "hobby2": "Lecture",
+    "translations": [
+      { "text": "Culture Asiatique", "flag": null },
+      { "text": "アジア文化", "flag": "japan.svg" },
+      { "text": "아시아 문화", "flag": "korea.svg" }
+    ]
+  },
+  "career": {
+    "title": "Mon parcours",
+    "events": [
+      {
+        "title": "BACCALAURÉAT",
+        "startDate": "2017-09-01",
+        "endDate": "2019-06-30",
+        "location": ["Lycée Mireille Grenet", "Compiègne", "France"],
+        "mapUrl": "https://maps.app.goo.gl/tFC3HcuS2VzNDwyX7"
+      },
+      {
+        "title": "BAFA",
+        "startDate": "2017-07-01",
+        "endDate": "2020-06-30",
+        "location": ["UFCV Picardie", "Amiens", "France"],
+        "mapUrl": "https://maps.app.goo.gl/p7ph3Jp1pSihFkTF9"
+      },
+      {
+        "title": "Niveau DUT Informatique",
+        "startDate": "2019-09-01",
+        "endDate": "2022-06-30",
+        "location": ["Université Polytechnique Hauts-de France", "Maubeuge", "France"],
+        "mapUrl": "https://maps.app.goo.gl/4UEUbKvcURkAbByu5"
+      },
+      {
+        "title": "Intégrateur - Développeur web",
+        "startDate": "2023-11-20",
+        "endDate": "2025-11-14",
+        "location": ["Web@cademie Epitech Lille", "Lille", "France"],
+        "mapUrl": "https://maps.app.goo.gl/VABA4G1UyMoFLy2c6"
+      },
+      {
+        "title": "Concepteur Développeur d’Applications - option Éco-conception des services numériques",
+        "startDate": "2025-11-17",
+        "endDate": "2027-04-16",
+        "location": ["Simplon", "À distance"],
+        "mapUrl": ""
+      }
+    ]
+  },
+  "experience": {
+    "title": "expériences professionnelles",
+    "jobs": [
+      {
+        "id": "1",
+        "title": "Développeuse Full-Stack (Alternance)",
+        "company": "Investir dans l'ancien",
+        "mapUrl": "https://maps.app.goo.gl/MfHgmWvyUU9CitNR9",
+        "location": "Paris",
+        "startDate": "2025-11-24",
+        "endDate": "2027-04-09",
+        "period": "De Nov. 2025 à Avril 2027",
+        "description": "Maintenance / Déploiements des 5 plateformes utilisées par l'entreprise et leurs clients en React / Tailwind / NodeJS / NextJS / PHP / SQL"
+      },
+      {
+        "id": "2",
+        "title": "Développeuse Front-End Junior (Alternance)",
+        "company": "Iceberg Data Lab",
+        "mapUrl": "https://maps.app.goo.gl/QqTGKmdvPsriyA1j7",
+        "location": "Paris",
+        "startDate": "2025-01-06",
+        "endDate": "2025-11-07",
+        "period": "De Jan. 2025 à Nov. 2025",
+        "description": "Maintenance des 2 plateformes utilisées par l'entreprise et leurs clients en Angular / Ruby on Rails / Tailwind"
+      },
+      {
+        "id": "3",
+        "title": "Stagiaire Intégrateur - Développeur web",
+        "company": "Web@cadémie",
+        "mapUrl": "https://maps.app.goo.gl/VABA4G1UyMoFLy2c6",
+        "startDate": "2023-11-20",
+        "endDate": "2025-11-14",
+        "location": "Lille, France",
+        "period": "De Nov. 2023 à Nov. 2025",
+        "description": "Durant ces 2 années de formation, j’ai développé différents projets :\n\n- Interaction avec des API / Création d'API\n- CRUD / MVC / Responsive\n- Création d’un site complet E-commerce"
+      },
+      {
+        "id": "4",
+        "title": "Stagiaire en informatique",
+        "company": "Société Plessier et Fils",
+        "location": "Compiègne, France",
+        "mapUrl": "https://maps.app.goo.gl/o9WKZF4paS7Tjcn68",
+        "startDate": "2022-04",
+        "endDate": "2022-06",
+        "period": "De Avr. 2022 à Juin 2022",
+        "description": "Développement d’un site internet en HTML / CSS / PHP / JS pour la société Plessier et Fils"
+      },
+      {
+        "id": "5",
+        "title": "Développeuse web (Projets universitaires)",
+        "company": "Université Polytechnique Hauts-de-France, IUT de Maubeuge",
+        "mapUrl": "https://maps.app.goo.gl/4UEUbKvcURkAbByu5",
+        "location": "Maubeuge, France",
+        "startDate": "2019",
+        "endDate": "2023",
+        "period": "2019 - 2023",
+        "description": "Développement de sites web sur divers thèmes :\n\n- Jeux Olympiques\n- Mythologies\n- Furry"
+      },
+      {
+        "id": "6",
+        "title": "Animatrice - Centre de loisirs",
+        "company": "Centre de loisirs",
+        "mapUrl": "https://maps.app.goo.gl/iKJ4DwLvEHgfxpBs9",
+        "location": "Compiègne, France",
+        "startDate": "2017",
+        "endDate": "2022",
+        "period": "2017 - 2022",
+        "description": "Responsable de groupes d’enfants de différents âges, travail en équipe et participation à des réunions pédagogiques."
+      }
+    ]
+  },
+  "skills": {
+    "title": "compétences",
+    "categories": [
+      {
+        "type": "Langages & Programmation",
+        "items": [
+          { "name": "JavaScript", "icon": "javascript.png" },
+          { "name": "TypeScript", "icon": "typescript.png" },
+          { "name": "PHP", "icon": "php.png" },
+          { "name": "CSS", "icon": "css.png" },
+          { "name": "SQL", "icon": "sql.png" },
+          { "name": "HTML", "icon": "html.png" },
+          { "name": "Python", "icon": "python.png" },
+          { "name": "Ruby", "icon": "ruby.png" },
+          { "name": "Go", "icon": "go.png" },
+          { "name": "Java", "icon": "java.png" },
+          { "name": "C", "icon": "c.png" }
+        ]
+      },
+      {
+        "type": "Frameworks & Bibliothèques",
+        "items": [
+          { "name": "React", "icon": "react.png" },
+          { "name": "Angular", "icon": "angular.png" },
+          { "name": "Next.js", "icon": "nextjs.png" },
+          { "name": "NestJS", "icon": "nestjs.png" },
+          { "name": "Node.js", "icon": "nodejs.png" },
+          { "name": "Express", "icon": "express.png" },
+          { "name": "Symfony", "icon": "symfony.png" },
+          { "name": "Laravel", "icon": "laravel.png" },
+          { "name": "Django", "icon": "django.png" },
+          { "name": "Rails", "icon": "rails.png" },
+          { "name": "Spring Boot", "icon": "spring.png" },
+          { "name": "Bootstrap", "icon": "bootstrap.png" },
+          { "name": "TailwindCSS", "icon": "tailwind.png" }
+        ]
+      },
+      {
+        "type": "Outils & Technologies",
+        "items": [
+          { "name": "Docker", "icon": "docker.png" },
+          { "name": "Wordpress", "icon": "wordpress.png" },
+          { "name": "Figma", "icon": "figma.png" }
+        ]
+      },
+      {
+        "type": "Logiciels & Outils de gestion",
+        "items": [
+          { "name": "Word", "icon": "word.png" },
+          { "name": "Excel", "icon": "excel.png" },
+          { "name": "PowerPoint", "icon": "powerpoint.png" },
+          { "name": "Trello", "icon": "trello.png" },
+          { "name": "Notion", "icon": "notion.png" },
+          { "name": "Jira", "icon": "jira.png" },
+          { "name": "YouTrack", "icon": "youtrack.png" },
+          { "name": "Photoshop", "icon": "photoshop.png" },
+          { "name": "Canva", "icon": "canva.png" }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "projets réalisés"
+  },
+  "contact": {
+    "title": "Me contacter",
+    "email": "zpilia2@gmail.com",
+    "phone": "+33 7 81 69 15 51",
+    "location": "Compiègne, France",
+    "mapUrl": "https://maps.app.goo.gl/Y9dh9aQACo4YAQ8U9"
+  },
+  "footer": {
+    "socials": [
+      {
+        "name": "LinkedIn",
+        "href": "https://www.linkedin.com/in/zoé-pilia-1780161b0",
+        "hoverColor": "#0077B5"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/zpilia",
+        "hoverColor": "#9CA3AF"
+      },
+      {
+        "name": "Instagram",
+        "href": "https://www.instagram.com/kimlai.2001/",
+        "hoverColor": "#E4405F"
+      },
+      {
+        "name": "X (Twitter)",
+        "href": "https://x.com/zoe_pilia",
+        "hoverColor": "#1DA1F2"
+      }
+    ]
+  }
+}
