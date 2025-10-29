@@ -6,6 +6,8 @@ const Projects = () => {
     const [repos, setRepos] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const apiBase = process.env.REACT_APP_GITHUB_API || "https://api.github.com";
+
     useEffect(() => {
         const fetchRepos = async () => {
             try {
@@ -16,7 +18,13 @@ const Projects = () => {
                     return;
                 }
 
-                const response = await fetch("https://api.github.com/users/zpilia/repos");
+                const response = await fetch("/api/github");
+
+                if (!response.ok) {
+                    const text = await response.text();
+                    throw new Error(`Erreur API (${response.status}): ${text}`);
+                }
+
                 const data = await response.json();
 
                 const enrichedRepos = await Promise.all(
@@ -25,12 +33,7 @@ const Projects = () => {
                         .map(async (repo) => {
                             try {
                                 const topicsResponse = await fetch(
-                                    `https://api.github.com/repos/${repo.owner.login}/${repo.name}/topics`,
-                                    {
-                                        headers: {
-                                            Accept: "application/vnd.github.mercy-preview+json",
-                                        },
-                                    }
+                                    `${apiBase}/repos/${repo.owner.login}/${repo.name}/topics`
                                 );
                                 const topicsData = await topicsResponse.json();
 
@@ -42,7 +45,7 @@ const Projects = () => {
                                     demoLink: repo.homepage || null,
                                     codeLink: repo.html_url,
                                 };
-                            } catch (error) {
+                            } catch {
                                 console.warn(`Impossible de charger les topics pour ${repo.name}`);
                                 return {
                                     title: repo.name,
@@ -66,7 +69,7 @@ const Projects = () => {
         };
 
         fetchRepos();
-    }, []);
+    }, [apiBase]);
 
     return (
         <section
@@ -76,8 +79,8 @@ const Projects = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">
                 Mes{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">
-                    projets
-                </span>
+          projets
+        </span>
             </h2>
 
             {loading ? (
@@ -85,13 +88,13 @@ const Projects = () => {
             ) : repos.length > 0 ? (
                 <div
                     className="
-                        grid
-                        gap-8 sm:gap-10 md:gap-12
-                        justify-items-center
-                        w-full
-                        max-w-[90%] sm:max-w-5xl lg:max-w-7xl
-                        grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
-                    "
+            grid
+            gap-8 sm:gap-10 md:gap-12
+            justify-items-center
+            w-full
+            max-w-[90%] sm:max-w-5xl lg:max-w-7xl
+            grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+          "
                 >
                     {repos.map((proj, idx) => (
                         <ProjectCard
