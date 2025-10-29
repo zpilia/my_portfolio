@@ -1,70 +1,176 @@
-# Getting Started with Create React App
+# 🧑‍💻 Portfolio Zoé Pilia – Développeuse Web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Portfolio Zoé Pilia** est une application React responsive développée avec **React.js**, **Tailwind CSS**, l’**API GitHub** et **EmailJS**.  
+Elle présente mon parcours, mes compétences, mes projets personnels hébergés sur GitHub, ainsi qu’un formulaire de contact fonctionnel.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📌 Objectif
 
-### `npm start`
+Concevoir un portfolio professionnel et accessible me permettant de :
+- Mettre en avant mon **parcours et mes expériences**
+- Présenter mes **projets open-source** grâce à l’API GitHub
+- Donner un aperçu clair de mes **compétences techniques**
+- Être contactée facilement via un **formulaire EmailJS**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧩 Sections du Portfolio
 
-### `npm test`
+- 🏠 Accueil (présentation rapide)
+- 👩‍💼 À propos de moi
+- 🎓 Mon parcours
+- 🧑‍💼 Mes expériences
+- 🛠️ Mes compétences
+- 💻 Mes projets (données dynamiques via GitHub API)
+- 📬 Me contacter (formulaire EmailJS)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Technologies Utilisées
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Catégorie       | Technologies               |
+|------------------|----------------------------|
+| Framework        | React.js                   |
+| UI & Design      | Tailwind CSS               |
+| API              | GitHub REST API            |
+| Formulaire       | EmailJS                    |
+| Déploiement      | Vercel (à venir)           |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Lancement local
 
-### `npm run eject`
+1. Cloner le projet :
+```bash
+git clone https://github.com/zpilia/portfolio-zoe-pilia.git
+cd portfolio-zoe-pilia
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Installer les dépendances :
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Lancer l’application :
+```bash
+npm run dev
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> 💡 L’application sera accessible sur `http://localhost:5173` (ou selon votre configuration Vite)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📡 Configuration (EmailJS)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Créer un compte sur [https://www.emailjs.com](https://www.emailjs.com), puis :
+- Ajouter votre **User ID**, **Service ID** et **Template ID** dans un fichier `.env` :
+```env
+REACT_APP_EMAILJS_SERVICE_ID=xxx
+REACT_APP_EMAILJS_TEMPLATE_ID=xxx
+REACT_APP_EMAILJS_PUBLIC_KEY=xxx
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 👤 Développé par
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Développé par [Zoé Pilia](https://github.com/zpilia)  
+Projet personnel réalisé avec React.js & GitHub API dans le cadre de ma **formation Web@cadémie**.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🪪 Licence
 
-### Making a Progressive Web App
+© Zoé Pilia — Tous droits réservés.  
+Reproduction, distribution ou modification soumises à autorisation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+# 🇬🇧 English Version
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# 🧑‍💻 Zoé Pilia's Developer Portfolio
 
-### Deployment
+**Zoé Pilia's Portfolio** is a responsive single-page application built with **React.js**, **Tailwind CSS**, **GitHub API**, and **EmailJS**.  
+It showcases my background, skills, open-source projects, and provides a contact form for easy communication.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📌 Purpose
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Create a professional and accessible portfolio to:
+- Highlight my **journey and experience**
+- Dynamically display **projects from GitHub**
+- Present my **technical skills**
+- Allow contact via a **functional EmailJS form**
+
+---
+
+## 🧩 Portfolio Sections
+
+- 🏠 Home
+- 👩‍💼 About Me
+- 🎓 Education
+- 🧑‍💼 Experience
+- 🛠️ Skills
+- 💻 Projects (via GitHub API)
+- 📬 Contact (EmailJS form)
+
+---
+
+## 🛠️ Tech Stack
+
+| Category        | Technologies         |
+|-----------------|----------------------|
+| Framework       | React.js             |
+| UI & Design     | Tailwind CSS         |
+| API             | GitHub REST API      |
+| Contact Form    | EmailJS              |
+| Deployment      | Vercel (coming soon) |
+
+---
+
+## 🚀 Local Setup
+
+1. Clone the project:
+```bash
+git clone https://github.com/zpilia/portfolio-zoe-pilia.git
+cd portfolio-zoe-pilia
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Run the application:
+```bash
+npm run dev
+```
+
+> 💡 The app will be available at `http://localhost:5173` (depending on your Vite setup)
+
+---
+
+## 📡 EmailJS Configuration
+
+Create an account on [https://www.emailjs.com](https://www.emailjs.com) and set:
+```env
+REACT_APP_EMAILJS_SERVICE_ID=xxx
+REACT_APP_EMAILJS_TEMPLATE_ID=xxx
+REACT_APP_EMAILJS_PUBLIC_KEY=xxx
+```
+
+---
+
+## 👤 Developed by
+
+Created by [Zoé Pilia](https://github.com/zpilia)  
+Personal project built with React.js & GitHub API during my **Web@cadémie training**.
+
+---
+
+## 🪪 License
+
+© Zoé Pilia — All rights reserved.  
+Use, reproduction or distribution requires permission.
