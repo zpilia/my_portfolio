@@ -75,8 +75,8 @@ const Projects = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">
                 Mes{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">
-          projets GitHub publics
-        </span>
+                    projets
+                </span>
             </h2>
 
             {loading ? (
