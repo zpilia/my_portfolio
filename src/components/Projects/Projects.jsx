@@ -16,43 +16,44 @@ const Projects = () => {
                     return;
                 }
 
-                const response = await fetch("/api/github");
-                if (!response.ok) throw new Error("API GitHub interne indisponible");
+                const response = await fetch("https://api.github.com/users/zpilia/repos");
                 const data = await response.json();
 
                 const enrichedRepos = await Promise.all(
-                    data.map(async (repo) => {
-                        try {
-                            const topicsResponse = await fetch(
-                                `https://api.github.com/repos/${repo.owner.login}/${repo.name}/topics`,
-                                {
-                                    headers: {
-                                        Accept: "application/vnd.github.mercy-preview+json",
-                                    },
-                                }
-                            );
-                            const topicsData = await topicsResponse.json();
+                    data
+                        .filter(repo => !repo.fork && !repo.private)
+                        .map(async (repo) => {
+                            try {
+                                const topicsResponse = await fetch(
+                                    `https://api.github.com/repos/${repo.owner.login}/${repo.name}/topics`,
+                                    {
+                                        headers: {
+                                            Accept: "application/vnd.github.mercy-preview+json",
+                                        },
+                                    }
+                                );
+                                const topicsData = await topicsResponse.json();
 
-                            return {
-                                title: repo.name,
-                                description: repo.description || "Aucune description disponible.",
-                                technologies: topicsData.names || [],
-                                image: `https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/main/assets/preview.png`,
-                                demoLink: repo.homepage || null,
-                                codeLink: repo.html_url,
-                            };
-                        } catch (error) {
-                            console.warn(`Impossible de charger les topics pour ${repo.name}`);
-                            return {
-                                title: repo.name,
-                                description: repo.description || "Aucune description disponible.",
-                                technologies: [],
-                                image: `https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/main/assets/preview.png`,
-                                demoLink: repo.homepage || null,
-                                codeLink: repo.html_url,
-                            };
-                        }
-                    })
+                                return {
+                                    title: repo.name,
+                                    description: repo.description || "Aucune description disponible.",
+                                    technologies: topicsData.names || [],
+                                    image: `https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/main/assets/preview.png`,
+                                    demoLink: repo.homepage || null,
+                                    codeLink: repo.html_url,
+                                };
+                            } catch (error) {
+                                console.warn(`Impossible de charger les topics pour ${repo.name}`);
+                                return {
+                                    title: repo.name,
+                                    description: repo.description || "Aucune description disponible.",
+                                    technologies: [],
+                                    image: `https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/main/assets/preview.png`,
+                                    demoLink: repo.homepage || null,
+                                    codeLink: repo.html_url,
+                                };
+                            }
+                        })
                 );
 
                 setRepos(enrichedRepos);
@@ -84,13 +85,13 @@ const Projects = () => {
             ) : repos.length > 0 ? (
                 <div
                     className="
-            grid
-            gap-8 sm:gap-10 md:gap-12
-            justify-items-center
-            w-full
-            max-w-[90%] sm:max-w-5xl lg:max-w-7xl
-            grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
-          "
+                        grid
+                        gap-8 sm:gap-10 md:gap-12
+                        justify-items-center
+                        w-full
+                        max-w-[90%] sm:max-w-5xl lg:max-w-7xl
+                        grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+                    "
                 >
                     {repos.map((proj, idx) => (
                         <ProjectCard
